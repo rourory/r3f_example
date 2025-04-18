@@ -18,6 +18,7 @@ const App: React.FC<AppType> = ({ position = new Vector3(-1, 1, 3.5), fov = 25 }
   return (
     <Canvas
       shadows
+      gl={{ preserveDrawingBuffer: true }}
       eventSource={document.getElementById('root')!}
       eventPrefix="client"
       camera={{ position, fov }}>
