@@ -2,12 +2,13 @@ import React from 'react';
 import { AiFillCamera, AiOutlineArrowLeft } from 'react-icons/ai';
 import { state } from '../../valtio/store';
 import { useSnapshot } from 'valtio';
+import { motion } from 'framer-motion';
 
-const Customizer = () => {
+const Customizer: React.FC<any> = ({ config }) => {
   const snap = useSnapshot(state);
 
   return (
-    <section key={'custom'}>
+    <motion.section {...config} key={'custom'}>
       <div className="customizer">
         <div className="color-options">
           {state.colors.map((color) => (
@@ -59,7 +60,7 @@ const Customizer = () => {
         GO BACK
         <AiOutlineArrowLeft size={'1.3em'} />
       </button>
-    </section>
+    </motion.section>
   );
 };
 

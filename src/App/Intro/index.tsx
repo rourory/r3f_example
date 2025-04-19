@@ -1,9 +1,10 @@
 import { AiOutlineHighlight } from 'react-icons/ai';
 import {state} from '../../valtio/store';
+import {motion} from 'framer-motion';
 
-const Intro = () => {
+const Intro:React.FC<any> = ({config}) => {
   return (
-    <section key="main">
+    <motion.section {...config} key="main">
       <div className="section--container">
         <div>
           <h1>LET'S DO IT.</h1>
@@ -22,7 +23,7 @@ const Intro = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
